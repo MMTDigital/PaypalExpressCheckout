@@ -53,6 +53,16 @@ class Response
     }
 
     /**
+     * Returns all of the parameters
+     * 
+     * @return array
+     */
+    public function getParameters()
+    {
+        return $this->parameters;
+    }
+
+    /**
      * Determine if request was a success (complete success not success with warning)
      *
      * @return bool
