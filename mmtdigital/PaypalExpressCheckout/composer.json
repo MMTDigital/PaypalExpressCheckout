@@ -1,0 +1,32 @@
+{
+    "name": "mmtdigital/paypalexpresscheckout",
+    "type": "library",
+    "description": "Simple Paypal Express Checkout Wrapper",
+    "keywords": ["paypal", "express", "checkout", "api", "nvp"],
+    "homepage": "https://github.com/MMTDigital/PaypalExpressCheckout",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben Squire",
+            "email": "ben.s@mmtdigital.co.uk",
+            "homepage": "https://github.com/MMTDigital/PaypalExpressCheckout"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/MMTDigital/PaypalExpressCheckout/issues",
+        "wiki": "https://github.com/MMTDigital/PaypalExpressCheckout/wiki"
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "ext-hash": "*"
+    },
+    "suggest": {
+        "ext-openssl": "The OpenSSL extension is used as the default source of cryptographically strong random data.",
+        "ext-mcrypt": "The Mcrypt extension is used as a source of cryptographically strong random data in the absence of ext-openssl."
+    },
+    "autoload": {
+        "psr-0": {
+            "PaypalExpressCheckout": "src/"
+        }
+    }
+}
