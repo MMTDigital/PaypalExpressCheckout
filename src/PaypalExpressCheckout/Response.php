@@ -54,7 +54,7 @@ class Response
 
     /**
      * Returns all of the parameters
-     * 
+     *
      * @return array
      */
     public function getParameters()
