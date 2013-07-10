@@ -21,20 +21,24 @@ abstract class Request
      * Set whether we're sending the user to the sandbox
      *
      * @param $sandbox
+     * @return $this
      */
     public function setSandbox($sandbox = true)
     {
         $this->sandbox = (bool)$sandbox;
+        return $this;
     }
 
     /**
      * Determines if we should output debugging information
      *
      * @param $debug
+     * @return $this
      */
     public function setDebug($debug = false)
     {
         $this->_debug = (bool)$debug;
+        return $this;
     }
 
     /**
