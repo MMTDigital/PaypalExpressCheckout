@@ -93,7 +93,7 @@ class Response
             return true;
         }
 
-        return (isset($this->parameters['Failure']) && (strpos($this->parameters['ACK'], 'Failure') !== false));
+        return (isset($this->parameters['ACK']) && (strpos($this->parameters['ACK'], 'Failure') !== false));
     }
 
     /**
