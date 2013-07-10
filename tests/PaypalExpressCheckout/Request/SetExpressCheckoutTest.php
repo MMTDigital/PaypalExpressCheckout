@@ -77,6 +77,10 @@ class SetExpressCheckoutTest extends PHPUnit_Framework_TestCase
                         ->setSignature('A-IzJhZZjhg29XQ2qnhapuwxIDzyAZQ92FRP5dqBzVesOkzbdUONzmOU');
 
         $this->assertTrue($this->_object->isValid());
+
+        $response = $this->_object->send();
+        $this->assertInstanceOf('PaypalExpressCheckout\Response', $response);
+        $this->assertTrue($response->isSuccess());
     }
 
     public function testDetermineMissingFields()
