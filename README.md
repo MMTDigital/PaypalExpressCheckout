@@ -1,5 +1,8 @@
 PaypalExpressCheckout
 =====================
+
+[![Build Status](https://travis-ci.org/MMTDigital/PaypalExpressCheckout.png)](https://travis-ci.org/MMTDigital/PaypalExpressCheckout)
+
 This simple wrapper builds, sends and interprets the commands sent too the Paypal Express Checkout API (NVP).
 
 The current functionality is limited, but should allow you too:
