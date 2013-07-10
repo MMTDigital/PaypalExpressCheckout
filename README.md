@@ -75,5 +75,5 @@ Fetch an 'Express Checkout Token'
     {
         throw new Exception('Missing Parameters: ' . implode(', ', $exCheckout->determineMissingFields()));
     }
-    
+
     $paypalResponse = $exCheckout->send();

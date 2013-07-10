@@ -15,7 +15,11 @@ class Response
 
     public function __construct($result = null)
     {
-        if ($result !== false)
+        if ($result === false)
+        {
+            $this->_response = false;
+        }
+        else
         {
             $this->setResponse($result);
         }
@@ -69,6 +73,11 @@ class Response
      */
     public function isSuccess()
     {
+        if (!$this->_response)
+        {
+            return false;
+        }
+
         return (isset($this->parameters['ACK']) && (strpos($this->parameters['ACK'], 'Success') !== false));
     }
 
@@ -79,6 +88,11 @@ class Response
      */
     public function isFailure()
     {
+        if (!$this->_response)
+        {
+            return true;
+        }
+
         return (isset($this->parameters['Failure']) && (strpos($this->parameters['ACK'], 'Failure') !== false));
     }
 
@@ -96,21 +110,6 @@ class Response
         }
 
         return $this->parameters['ACK'];
-    }
-
-    /**
-     * Return the timestamp of the response
-     *
-     * @return bool|int
-     */
-    public function getDate()
-    {
-        if (!isset($this->parameters['TIMESTAMP']))
-        {
-            return false;
-        }
-
-        return strtotime($this->parameters['TIMESTAMP']);
     }
 
     /**
